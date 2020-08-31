@@ -63,6 +63,11 @@ strong {
     font-weight: var(--fw-bold) 
 }
 
+:focus {
+    outline: 3px solid var(--clr-accent);
+    outline-offset: 3px;
+}
+
 
 /* Typography */
 
@@ -178,7 +183,7 @@ header {
 .hamburger,
 .hamburger::before,
 .hamburger::after {
-    background: var(--clr-dark);
+    background: var(--clr-accent);
     width: 2em;
     height: 3px;
     border-radius: 1em;
@@ -276,7 +281,7 @@ header {
         left: -1em;
         width: calc(100% + 2em);
         padding-left: 1em;
-        padding-right: calc(200px + 4em);
+        padding-right: calc(200px + 4em); /* 200px from image, 2 em right and 2 em left */
     }
 
     .about-me__img {
@@ -298,12 +303,13 @@ header {
 .portfolio {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    max-width: 1200px;
-    margin: 0 auto;
+    /* max-width: 1200px; 
+    margin: 0 auto; */
 }
 
 .portfolio__item {
     background: var(--clr-accent);
+    overflow: hidden;
 }
 
 .portfolio__img {
